@@ -19,10 +19,10 @@
     + 调用后台接口进行验证
     + 通过验证后，根据后台的响应状态跳转到项目页面
  2. 登录页面的相关技术点
-    + http是无状态
-    + 通过cookie在客户端记录
-    + 通过seeion在服务器端记录状态
-    + 通过token方式维持状态
+    + http是无状态(如果登录成功之后需要记录用户的登录状态，解决方案：-）
+     * 通过cookie在客户端记录
+     * 通过seeion在服务器端记录状态
+     * 通过token方式维持状态：vue项目运行在一个新的端口号下，服务器和前端vue项目存在一个跨域问题，若不存在跨域问题，推荐cookie和seeion来记录登录状态，反之，服务器和前端存在一个跨域问题，需要使用token方式维持登录状态，token值是由服务器生成的，不同的用户会有不同的token值
 ![token原理分析](https://github.com/lemon-0615/vue_shop/blob/master/image/token%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90.png)   
 + 登录界面
 ![登录界面](https://note.youdao.com/yws/public/resource/a590917cb48dcdcd15365607a22b2b6c/xmlnote/E73085EAFF034AB884250A2FAF91412C/5831)
